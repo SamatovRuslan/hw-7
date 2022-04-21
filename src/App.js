@@ -1,19 +1,29 @@
 import './App.css';
 import React from 'react';
-import {Button} from './components/Button/Button'
-import {Counter} from './components/Count/Count'
+import Comment from './components/Comment';;
 
+
+
+const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  author: {
+    name: 'Hello Kitty',
+    avatarUrl: 'http://placekitten.com/g/64/64'
+  }
+};
 
 function App() {
 
   return (
-    <div className="App">
-      <Counter counter={count}/>
-      <Button setCount={setCount} title="+"/>
-      <Button setCount={setCount} title='-'/>
-      <Counter/>
-    </div>
-  )
+    <Comment 
+    // comment = {comment}
+    author={comment.author}
+    text={comment.text}
+    date={comment.date}
+    />
+    
+  );
 }
 
 export default App;
