@@ -1,7 +1,7 @@
+import './CommentAvatar' 
+
 function CommentAvatar(props) {
-    return <img className="Avatar" 
-    src={props.author.avatarUrl}
-    alt={props.author.name} />
+    return <img className="UserInfo" src={props.pic} alt="" ></img>
 }
 
 export default CommentAvatar
